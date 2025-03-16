@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h> 
+#include <string.h> //Necessário para manipulação de strings, como a remoção do '\n' com strcspn()
 
 int main(){
 
@@ -23,7 +23,7 @@ int main(){
     printf("Insira o nome da cidade: ");
     while (getchar() != '\n'); //Limpa o buffer do teclado
     fgets(n_cidade_1, 20, stdin);
-    n_cidade_1[strcspn(n_cidade_1, "\n")] = 0;
+    n_cidade_1[strcspn(n_cidade_1, "\n")] = 0; //Uso de strcspn para remover a quebra de linha ao ler fgets.
     printf("Insira a população da cidade: ");
     scanf(" %d", &populacao_1);
     printf("Insira a área da cidade: ");
@@ -43,7 +43,7 @@ int main(){
     printf("Insira o nome da cidade: ");
     while (getchar() != '\n'); //Limpa o buffer do teclado
     fgets(n_cidade_2, 20, stdin);
-    n_cidade_2[strcspn(n_cidade_2, "\n")] = 0;
+    n_cidade_2[strcspn(n_cidade_2, "\n")] = 0; //Uso de strcspn para remover a quebra de linha ao ler fgets.
     printf("Insira a população da cidade: ");
     scanf(" %d", &populacao_2);
     printf("Insira a área da cidade: ");
